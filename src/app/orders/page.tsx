@@ -17,7 +17,7 @@ const allOrders = Array.from({ length: 10 }, (_, i) => ({
   taxes: (Math.random() * 10).toFixed(2),
   subtotal: (Math.random() * 200 + 50).toFixed(2),
   total: (Math.random() * 250 + 50).toFixed(2),
-  date: new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString().split('T')[0],
+  created: new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString().split('T')[0],
 }))
 
 const OrdersPage = () => {
@@ -51,7 +51,7 @@ const OrdersPage = () => {
                   {order.paid ? 'Paid': 'Unpaid'} 
                 </span>
               </TableCell>
-              <TableCell className="hidden md:table-cell">{order.date}</TableCell>
+              <TableCell className="hidden md:table-cell">{order.created}</TableCell>
               <TableCell>${order.taxes}</TableCell>
               <TableCell>${order.discount}</TableCell>
               <TableCell>${order.subtotal}</TableCell>
