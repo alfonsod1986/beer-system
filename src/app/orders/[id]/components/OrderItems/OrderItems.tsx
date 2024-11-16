@@ -6,16 +6,10 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import OrderItem from "./OrderItem";
-
-interface Item {
-  name: string;
-  quantity: number;
-  price_per_unit: number;
-  total: number;
-}
+import { IOrderItem } from "@/actions/order";
 
 interface Props {
-  items: Item[],
+  items: IOrderItem[],
 }
 const OrderItems = ({ items }: Props) => {
   return (
