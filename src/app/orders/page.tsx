@@ -9,11 +9,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { getAllOrders, Order } from "@/actions/order";
+import { getAllOrders, IOrder } from "@/actions/order";
 
 
 const OrdersPage = async() => {
-  const orders: Order[] = await getAllOrders();
+  const orders: IOrder[] = await getAllOrders();
 
   return (
     <div className="container mx-auto px-4 py-4">

@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Props {
-  id: string;
+  id: number;
   created: string;
   paid: boolean;
 }
@@ -20,7 +20,7 @@ const OrderInfo = ({ id, created, paid }: Props) => {
           </div>
           <div>
             <dt className="font-semibold">Date</dt>
-            <dd>{created}</dd>
+            <dd>{created.split('T')[0]}</dd>
           </div>
           <div>
             <dt className="font-semibold">Status</dt>
